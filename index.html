@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZUS Coffee Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#"><span>Z</span>US<span class="dot">.</span></a>
+    <nav id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartButton">Cart <span id="cartCount">0</span></button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  </header>
+
+  <main>
+   
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+  <div class="hero-copy">
+
+    <p class="eyebrow">
+      YOUR DAILY COFFEE RITUAL
+    </p>
+
+    <h1>
+      Coffee that<br>
+      keeps you<br>
+      <span>moving.</span>
+    </h1>
+
+    <p class="hero-text">
+      Crafted with passion, made for your everyday.
+      Discover your next favorite cup of coffee.
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="#menu" class="primary-btn">
+        Explore menu ↗
+      </a>
+
+      <a href="#story" class="text-btn">
+        Our story →
+      </a>
+
+    </div>
+
+    <div class="hero-note">
+      <span>●</span>
+      Freshly crafted. Always with purpose.
+    </div>
+
+  </div>
+
+
+  <!-- HERO COFFEE VISUAL -->
+
+<div class="hero-art">
+
+  <div class="sun-circle"></div>
+
+  <!-- Animated water ripple -->
+  <div class="water-ripple" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="coffee-card">
+
+
+      <div class="cup-lid"></div>
+
+      <div class="cup">
+
+  <!-- Animated liquid inside the cup -->
+
+
+  <div class="cup-logo">
+    ZUS<span>.</span>
+  </div>
+
+        <div class="cup-label">
+          ICED<br>
+          LATTE
+        </div>
+
+      </div>
+
+      <div class="ice ice-one"></div>
+      <div class="ice ice-two"></div>
+      <div class="ice ice-three"></div>
+
+      <div class="shadow"></div>
+
+    </div>
+
+    <div class="floating-tag">
+      100%
+      <small>GOOD VIBES</small>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     FULL COFFEE MENU
+========================= -->
+
+<section class="featured" id="menu">
+
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">WHAT'S BREWING</p>
+
+      <h2>
+        Find your<br>
+        <span>favorite.</span>
+      </h2>
+    </div>
+
+    <p class="section-description">
+      Discover coffee crafted for every mood,
+      moment, and craving.
+    </p>
+  </div>
+
+
+  <!-- SEARCH BAR -->
+
+  <div class="search-wrapper">
+
+    <span class="search-icon">⌕</span>
+
+    <input
+      type="text"
+      id="coffeeSearch"
+      placeholder="Search coffee, latte, americano..."
+      autocomplete="off"
+    />
+
+    <button id="clearSearch" type="button">
+      ✕
+    </button>
+
+  </div>
+
+
+  <!-- CATEGORY FILTERS -->
+
+  <div class="category-filters">
+
+    <button class="category-btn active" data-category="all">
+      All
+    </button>
+
+    <button class="category-btn" data-category="coffee">
+      Coffee
+    </button>
+
+    <button class="category-btn" data-category="latte">
+      Latte
+    </button>
+
+    <button class="category-btn" data-category="non-coffee">
+      Non-Coffee
+    </button>
+
+  </div>
+
+
+  <p id="searchMessage" class="search-message"></p>
+
+
+  <!-- MENU PRODUCTS -->
+
+  <div class="menu-grid">
+
+
+    <!-- ICED LATTE -->
+
+    <article
+      class="product-card"
+      data-name="Iced Latte"
+      data-category="latte coffee"
+      data-price="8.90"
+    >
+
+      <div class="product-image latte">
+        <span>ICED<br>LATTE</span>
+      </div>
+
+      <div class="product-info">
+
+        <div>
+          <h3>Iced Latte</h3>
+          <p>Espresso · Fresh milk</p>
+        </div>
+
+        <strong>RM 8.90</strong>
+
+      </div>
+
+      <button class="add-btn">
+        Add to cart +
+      </button>
+
+    </article>
+
+
+    <!-- SPANISH LATTE -->
+
+    <article
+      class="product-card"
+      data-name="Spanish Latte"
+      data-category="latte coffee"
+      data-price="10.90"
+    >
+
+      <div class="product-image spanish">
+        <span>SPANISH<br>LATTE</span>
+      </div>
+
+      <div class="product-info">
+
+        <div>
+          <h3>Spanish Latte</h3>
+          <p>Espresso · Condensed milk</p>
+        </div>
+
+        <strong>RM 10.90</strong>
+
+      </div>
+
+      <button class="add-btn">
+        Add to cart +
+      </button>
+
+    </article>
+
+
+    <!-- AMERICANO -->
+
+    <article
+      class="product-card"
+      data-name="Americano"
+      data-category="coffee"
+      data-price="7.90"
+    >
+
+      <div class="product-image americano">
+        <span>AMERICANO</span>
+      </div>
+
+      <div class="product-info">
+
+        <div>
+          <h3>Americano</h3>
+          <p>Bold espresso · Water</p>
+        </div>
+
+        <strong>RM 7.90</strong>
+
+      </div>
+
+      <button class="add-btn">
+        Add to cart +
+      </button>
+
+    </article>
+
+
+    <!-- CARAMEL LATTE -->
+
+    <article
+      class="product-card"
+      data-name="Caramel Latte"
+      data-category="latte coffee"
+      data-price="11.90"
+    >
+
+      <div class="product-image latte">
+        <span>CARAMEL<br>LATTE</span>
+      </div>
+
+      <div class="product-info">
+
+        <div>
+          <h3>Caramel Latte</h3>
+          <p>Espresso · Caramel · Milk</p>
+        </div>
+
+        <strong>RM 11.90</strong>
+
+      </div>
+
+      <button class="add-btn">
+        Add to cart +
+      </button>
+
+    </article>
+
+
+    <!-- MOCHA -->
+
+    <article
+      class="product-card"
+      data-name="Mocha"
+      data-category="latte coffee"
+      data-price="11.90"
+    >
+
+      <div class="product-image spanish">
+        <span>CHOCOLATE<br>MOCHA</span>
+      </div>
+
+      <div class="product-info">
+
+        <div>
+          <h3>Mocha</h3>
+          <p>Espresso · Chocolate · Milk</p>
+        </div>
+
+        <strong>RM 11.90</strong>
+
+      </div>
+
+      <button class="add-btn">
+        Add to cart +
+      </button>
+
+    </article>
+
+
+    <!-- COLD BREW -->
+
+    <article
+      class="product-card"
+      data-name="Cold Brew"
+      data-category="coffee"
+      data-price="9.90"
+    >
+
+      <div class="product-image americano">
+        <span>COLD<br>BREW</span>
+      </div>
+
+      <div class="product-info">
+
+        <div>
+          <h3>Cold Brew</h3>
+          <p>Slow brewed · Smooth coffee</p>
+        </div>
+
+        <strong>RM 9.90</strong>
+
+      </div>
+
+      <button class="add-btn">
+        Add to cart +
+      </button>
+
+    </article>
+
+
+    <!-- MATCHA -->
+
+    <article
+      class="product-card"
+      data-name="Matcha Latte"
+      data-category="non-coffee"
+      data-price="11.90"
+    >
+
+      <div class="product-image latte">
+        <span>MATCHA<br>LATTE</span>
+      </div>
+
+      <div class="product-info">
+
+        <div>
+          <h3>Matcha Latte</h3>
+          <p>Matcha · Fresh milk</p>
+        </div>
+
+        <strong>RM 11.90</strong>
+
+      </div>
+
+      <button class="add-btn">
+        Add to cart +
+      </button>
+
+    </article>
+
+
+    <!-- CHOCOLATE -->
+
+    <article
+      class="product-card"
+      data-name="Chocolate"
+      data-category="non-coffee"
+      data-price="10.90"
+    >
+
+      <div class="product-image spanish">
+        <span>CHOCOLATE</span>
+      </div>
+
+      <div class="product-info">
+
+        <div>
+          <h3>Chocolate</h3>
+          <p>Chocolate · Fresh milk</p>
+        </div>
+
+        <strong>RM 10.90</strong>
+
+      </div>
+
+      <button class="add-btn">
+        Add to cart +
+      </button>
+
+    </article>
+
+<!-- =========================================
+     EXTRA COFFEE DRINKS
+     ========================================= -->
+
+<!-- ICED CAPPUCCINO -->
+
+<article
+  class="product-card"
+  data-name="Iced Cappuccino"
+  data-category="coffee latte"
+  data-price="10.90"
+>
+  <div class="product-image americano">
+    <span>ICED<br>CAPPUCCINO</span>
+  </div>
+
+  <div class="product-info">
+    <div>
+      <h3>Iced Cappuccino</h3>
+      <p>Espresso · Milk foam</p>
+    </div>
+
+    <strong>RM 10.90</strong>
+  </div>
+
+  <button class="add-btn">
+    Add to cart +
+  </button>
+</article>
+
+
+<!-- VANILLA LATTE -->
+
+<article
+  class="product-card"
+  data-name="Vanilla Latte"
+  data-category="latte coffee"
+  data-price="11.90"
+>
+  <div class="product-image latte">
+    <span>VANILLA<br>LATTE</span>
+  </div>
+
+  <div class="product-info">
+    <div>
+      <h3>Vanilla Latte</h3>
+      <p>Espresso · Vanilla · Milk</p>
+    </div>
+
+    <strong>RM 11.90</strong>
+  </div>
+
+  <button class="add-btn">
+    Add to cart +
+  </button>
+</article>
+
+
+<!-- HAZELNUT LATTE -->
+
+<article
+  class="product-card"
+  data-name="Hazelnut Latte"
+  data-category="latte coffee"
+  data-price="12.90"
+>
+  <div class="product-image spanish">
+    <span>HAZELNUT<br>LATTE</span>
+  </div>
+
+  <div class="product-info">
+    <div>
+      <h3>Hazelnut Latte</h3>
+      <p>Espresso · Hazelnut · Milk</p>
+    </div>
+
+    <strong>RM 12.90</strong>
+  </div>
+
+  <button class="add-btn">
+    Add to cart +
+  </button>
+</article>
+
+
+<!-- =========================================
+     EXTRA MATCHA DRINKS
+     ========================================= -->
+
+<!-- STRAWBERRY MATCHA -->
+
+<article
+  class="product-card"
+  data-name="Strawberry Matcha"
+  data-category="non-coffee matcha"
+  data-price="13.90"
+>
+  <div class="product-image matcha">
+    <span>STRAWBERRY<br>MATCHA</span>
+  </div>
+
+  <div class="product-info">
+    <div>
+      <h3>Strawberry Matcha</h3>
+      <p>Strawberry · Matcha · Milk</p>
+    </div>
+
+    <strong>RM 13.90</strong>
+  </div>
+
+  <button class="add-btn">
+    Add to cart +
+  </button>
+</article>
+
+
+<!-- DIRTY MATCHA -->
+
+<article
+  class="product-card"
+  data-name="Dirty Matcha"
+  data-category="non-coffee matcha"
+  data-price="13.90"
+>
+  <div class="product-image matcha">
+    <span>DIRTY<br>MATCHA</span>
+  </div>
+
+  <div class="product-info">
+    <div>
+      <h3>Dirty Matcha</h3>
+      <p>Matcha · Espresso · Milk</p>
+    </div>
+
+    <strong>RM 13.90</strong>
+  </div>
+
+  <button class="add-btn">
+    Add to cart +
+  </button>
+</article>
+
+
+<!-- MATCHA FRAPPE -->
+
+<article
+  class="product-card"
+  data-name="Matcha Frappe"
+  data-category="non-coffee matcha"
+  data-price="13.90"
+>
+  <div class="product-image matcha">
+    <span>MATCHA<br>FRAPPE</span>
+  </div>
+
+  <div class="product-info">
+    <div>
+      <h3>Matcha Frappe</h3>
+      <p>Matcha · Milk · Ice blend</p>
+    </div>
+
+    <strong>RM 13.90</strong>
+  </div>
+
+  <button class="add-btn">
+    Add to cart +
+  </button>
+</article>
+
+  </div>
+
+</section>
+
+    <section class="story" id="story">
+      <div class="story-panel">
+        <p class="eyebrow">OUR PHILOSOPHY</p>
+        <h2>Good coffee.<br><span>Good energy.</span></h2>
+        <p>We believe coffee should feel simple, exciting, and accessible. Every cup is designed to make ordinary moments feel a little better.</p>
+        <a class="primary-btn" href="#contact">Say hello ↗</a>
+      </div>
+      <div class="story-stat"><strong>01</strong><span>Freshly<br>crafted</span></div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div><a class="logo" href="#"><span>Z</span>US<span class="dot">.</span></a><p>A blue-and-white coffee concept.</p></div>
+    <div class="footer-links"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#story">Story</a></div>
+    <p>© <span id="year"></span> Concept project</p>
+  </footer>
+
+  
+<!-- =========================
+     COFFEE CUSTOMIZATION MODAL
+========================= -->
+
+<div
+  class="custom-modal"
+  id="customModal"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="customTitle"
+>
+
+  <div class="custom-modal-box">
+
+    <div class="custom-modal-header">
+
+      <div>
+        <p class="eyebrow">MAKE IT YOURS</p>
+
+        <h2 id="customTitle">
+          Customize your drink
+        </h2>
+      </div>
+
+      <button
+        class="custom-close"
+        id="closeCustomModal"
+        type="button"
+        aria-label="Close customization"
+      >
+        ✕
+      </button>
+
+    </div>
+
+
+    <p class="custom-description" id="customDescription">
+      Customize your favorite drink.
+    </p>
+
+
+    <!-- SIZE -->
+
+    <div class="custom-option">
+
+      <h3>Choose your size</h3>
+
+      <div class="custom-choice-grid">
+
+        <label class="custom-choice selected">
+
+          <input
+            type="radio"
+            name="drinkSize"
+            value="Regular"
+            data-extra="0"
+            checked
+          />
+
+          <span>Regular</span>
+
+          <small id="regularPrice">
+            RM 0.00
+          </small>
+
+        </label>
+
+
+        <label class="custom-choice">
+
+          <input
+            type="radio"
+            name="drinkSize"
+            value="Large"
+            data-extra="2"
+          />
+
+          <span>Large</span>
+
+          <small>+ RM 2.00</small>
+
+        </label>
+
+      </div>
+
+    </div>
+
+
+    <!-- ICE -->
+
+   <div class="custom-option">
+
+  <h3>Ice level</h3>
+
+<input type="hidden" id="iceLevel" value="Normal ice">
+
+  <div class="choice-pills" id="iceLevelPills">
+
+    <button
+      type="button"
+      class="choice-pill active"
+      data-value="Normal ice"
+    >
+      Normal ice
+    </button>
+
+    <button
+      type="button"
+      class="choice-pill"
+      data-value="Less ice"
+    >
+      Less ice
+    </button>
+
+    <button
+      type="button"
+      class="choice-pill"
+      data-value="No ice"
+    >
+      No ice
+    </button>
+
+  </div>
+
+</div>
+
+
+    <!-- SUGAR -->
+
+    <div class="custom-option">
+
+  <h3>Sugar level</h3>
+
+  <input type="hidden" id="sugarLevel" value="Normal sugar">
+
+  <div class="choice-pills" id="sugarLevelPills">
+
+    <button
+      type="button"
+      class="choice-pill active"
+      data-value="Normal sugar"
+    >
+      Normal sugar
+    </button>
+
+    <button
+      type="button"
+      class="choice-pill"
+      data-value="Less sugar"
+    >
+      Less sugar
+    </button>
+
+    <button
+      type="button"
+      class="choice-pill"
+      data-value="No sugar"
+    >
+      No sugar
+    </button>
+
+  </div>
+
+</div>
+
+
+    <!-- EXTRA ESPRESSO -->
+
+    <label class="custom-extra">
+
+      <span>
+
+        <strong>Extra espresso</strong>
+
+        <small>More coffee flavor</small>
+
+      </span>
+
+      <span class="extra-right">
+
+        <span>+ RM 2.00</span>
+
+        <input
+          type="checkbox"
+          id="extraEspresso"
+        />
+
+      </span>
+
+    </label>
+
+
+    <!-- TOTAL -->
+
+    <div class="custom-total">
+
+      <span>Total</span>
+
+      <strong id="customTotal">
+        RM 0.00
+      </strong>
+
+    </div>
+
+
+    <button
+      class="primary-btn custom-add-btn"
+      id="confirmCustomization"
+      type="button"
+    >
+      Add to cart
+    </button>
+
+  </div>
+
+</div>
+
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+    <div class="cart-header"><h2>Your cart</h2><button id="closeCart">✕</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty-cart">Your cart is empty.</p></div>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">RM 0.00</strong></div>
+    <button class="primary-btn checkout-btn" id="checkoutButton">Checkout</button>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>
